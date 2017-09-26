@@ -1,0 +1,2 @@
+module FocasHelper
+end

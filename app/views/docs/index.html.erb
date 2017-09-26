@@ -1,0 +1,92 @@
+<div class="col-sm-12">
+  <br>
+  Apenas a listagem das focas, os detalhes de cada foca e a documentação dispensam autenticação.<br>
+  Para dados em JSON, acrescentar .json no final de cada URL.<br>
+  A pesquisa de focas é efetuada através do index, acrescentando o parâmetro UTF-8 e search:<br>
+  Ex: <strong>/focas?utf8=✓&search=am</strong><br>
+  Sendo <strong>"am"</strong> a palavra-chave a pesquisar.<br>
+  O símbolo ✓ pode ser representado também por %E2%9C%93.
+  <br>
+  <table class="table table-bordered table-striped text-center">
+    <h1>Focas</h1>
+    <thead>
+    <tr>
+      <th>HTTP Verb</th>
+      <th>Path</th>
+      <th>Controller#Action</th>
+      <th>Usado para</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td bgcolor="#7cfc00">GET</td>
+      <td>/focas</td>
+      <td>focas#index</td>
+      <td>exibe a lista de focas</td>
+    </tr>
+    <tr>
+      <td bgcolor="#7cfc00">GET</td>
+      <td>/focas/new</td>
+      <td>focas#new</td>
+      <td>devolve um formulário HTML para adicionar uma foca</td>
+    </tr>
+    <tr>
+      <td bgcolor="orange">POST</td>
+      <td>/focas</td>
+      <td>focas#create</td>
+      <td>adiciona uma nova foca</td>
+    </tr>
+    <tr>
+      <td bgcolor="#7cfc00">GET</td>
+      <td>/focas/:id</td>
+      <td>focas#show</td>
+      <td>exibe os detalhes de uma foca específica</td>
+    </tr>
+    <tr>
+      <td bgcolor="#7cfc00">GET</td>
+      <td>/focas/:id/edit</td>
+      <td>focas#edit</td>
+      <td>devolve um formulário HTML para editar uma foca</td>
+    </tr>
+    <tr>
+      <td bgcolor="aqua">PATCH/PUT</td>
+      <td>/focas/:id</td>
+      <td>focas#update</td>
+      <td>atualiza uma foca específica</td>
+    </tr>
+    <tr>
+      <td bgcolor="red">DELETE</td>
+      <td>/focas/:id</td>
+      <td>focas#destroy</td>
+      <td>elimina uma foca específica</td>
+    </tr>
+    </tbody>
+  </table>
+  <table class="table table-bordered table-striped text-center">
+    <h1>Docs</h1>
+    <thead>
+    <tr>
+      <th>HTTP Verb</th>
+      <th>Path</th>
+      <th>Controller#Action</th>
+      <th>Usado para</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td bgcolor="#7cfc00">GET</td>
+      <td>/docs</td>
+      <td>docs#index</td>
+      <td>mostra a documentação da API</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div col-sm-3>
+    Serviço construído com:<br>
+    <img height="100" width="200" src="http://rubyonrails.org/images/rails-logo.svg">
+    &nbsp&nbsp&nbsp&nbsp<img height="100" width="200" src="https://camo.githubusercontent.com/b1c21cc10f2f94857dea5135fe55f2e4d451e028/68747470733a2f2f7261772e6769746875622e636f6d2f706c617461666f726d617465632f6465766973652f6d61737465722f6465766973652e706e67"/>
+    &nbsp&nbsp&nbsp&nbsp<img height="100" width="200" src="http://media02.hongkiat.com/bootstrap-and-sass/bootstrap-sass.jpg">
+    &nbsp&nbsp&nbsp&nbsp<img height="100" width="200" src="http://puma.io/images/logos/puma-logo-large.png">
+  </div>
+</div>

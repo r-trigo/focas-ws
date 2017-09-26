@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class= "container">
+
+<strong><%= Foca #@foca.id - @foca.nome %></strong>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @foca.nome %>
+</p>
+
+<p>
+  <strong>Altura cm:</strong>
+  <%= @foca.altura_cm %>
+</p>
+
+<p>
+  <strong>Peso kg:</strong>
+  <%= @foca.peso_kg %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @foca.data_nascimento %>
+</p>
+
+<%= link_to 'Edit', edit_foca_path(@foca) %> |
+<%= link_to 'Back', focas_path %>
+</div>

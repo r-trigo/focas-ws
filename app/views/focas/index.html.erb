@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<span class="badge badge-pill badge-primary center-block" , style="width: 500px"><h1>Focas</h1></span>
+<br>
+<br>
+<div class="new-product"></div>
+
+<div class="col-sm-6">
+  <div class="input-group">
+    <%= form_tag focas_path, :method => 'GET' do %>
+        Pesquisar por nome:
+        <span class="input-group-btn">
+        <%= text_field_tag :search, params[:search], :placeholder => 'Ex: Jaquina', class: 'form-control', style: 'width: 500px' %>
+          <%= submit_tag 'Pesquisar', :name => nil, class: 'btn btn-primary' %>
+      </span>
+    <% end %>
+  </div>
+</div>
+
+<div class="col-sm-12">
+  <br>
+  <br>
+  <table class="table table-bordered table-striped text-center">
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Altura (cm)</th>
+      <th>Peso (kg)</th>
+      <th>Data de nascimento (aaaa-dd-mm)</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody class="product-index">
+    <% @focas.each do |foca| %>
+        <tr>
+          <td><%= foca.nome %></td>
+          <td><%= foca.altura_cm %></td>
+          <td><%= foca.peso_kg %></td>
+          <td><%= foca.data_nascimento %></td>
+          <td><%= link_to 'Ver detalhes', foca, class: 'btn btn-default' %></td>
+          <td><%= link_to 'Editar', edit_foca_path(foca), class: 'btn btn-warning' %></td>
+          <td><%= link_to 'Eliminar', foca, method: :delete, data: {confirm: 'Tem a certeza?'}, class: 'btn btn-danger' %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="btn pull-right">
+    <%= link_to 'Adicionar Foca', new_foca_path, class: 'btn btn-primary' %>
+  </div>
+</div>

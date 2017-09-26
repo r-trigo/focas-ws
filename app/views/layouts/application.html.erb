@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focas</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<div id="container">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Focas</a>
+    </div> <!-- end div class="navbar-header" -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to 'Lista', focas_path %></li>
+        <li><%= link_to 'Adicionar', new_foca_path %></li>
+        <li><%= link_to 'Documentação', docs_path %></li>
+        <% if utilizador_signed_in? %>
+            <li><%= link_to 'Sessão iniciada como: ' + current_utilizador.email %></li>
+            <li><%= link_to 'Editar perfil', edit_utilizador_registration_path %></li>
+            <li><%= link_to 'Terminar sessão', destroy_utilizador_session_path, method: :delete %></li>
+        <% else %>
+            <li><%= link_to 'Registar', new_utilizador_registration_path %></li>
+            <li><%= link_to 'Iniciar sessão', new_utilizador_session_path %></li>
+        <% end %>
+      </ul>
+    </div> <!-- end div class="collapse navbar-collapse" -->
+  </div> <!-- end div class="navbar navbar-default navbar-fixed-top" -->
+
+  <div>
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>

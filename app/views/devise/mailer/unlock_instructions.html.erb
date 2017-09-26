@@ -1,0 +1,7 @@
+<p>Olá, <%= @resource.email %>!</p>
+
+<p>A sua conta foi bloqueada por excesso de tentativas de iniciar sessão.</p>
+
+<p>Clique aqui para a desbloquear:</p>
+
+<p><%= link_to 'Desbloquear conta', unlock_url(@resource, unlock_token: @token) %></p>

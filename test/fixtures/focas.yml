@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  altura_cm: 1
+  peso_kg: 1.5
+  data_nascimento: 2017-01-10
+
+two:
+  nome: MyString
+  altura_cm: 1
+  peso_kg: 1.5
+  data_nascimento: 2017-01-10

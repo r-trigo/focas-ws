@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2017-01-10
+  nome_comprador: MyString
+  receita: 9.99
+
+two:
+  data: 2017-01-10
+  nome_comprador: MyString
+  receita: 9.99

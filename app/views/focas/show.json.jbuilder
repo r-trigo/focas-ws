@@ -1,0 +1,1 @@
+json.partial! "focas/foca", foca: @foca

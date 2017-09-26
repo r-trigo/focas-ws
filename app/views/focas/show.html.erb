@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class= "container">
+
+  <h1><%= 'Foca #' + @foca.id.to_s + ' - ' + @foca.nome.to_s %></h1>
+  <br>
+  <table class= "table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Atributo</td>
+        <td>Foca</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td><%= @foca.id %></td>
+      </tr>
+      <tr>
+        <td>Nome</td>
+        <td><%= @foca.nome %></td>
+      </tr>      
+      <tr>
+        <td>Altura (cm)</td>
+        <td><%= @foca.altura_cm %></td>
+      </tr>
+      <tr>
+        <td>Peso (kg)</td>
+        <td><%= @foca.peso_kg %></td>
+      </tr>
+      <tr>
+        <td>Data de nascimento (mm/dd/aaaa)</td>
+        <td><%= @foca.data_nascimento.strftime('%d/%m/%Y') %></td>
+    </tbody>
+  </table>
+
+
+  <%= link_to 'Editar', edit_foca_path(@foca), class: "btn btn-warning" %>
+  <%= link_to 'Voltar', focas_path, class: "btn btn-default" %>
+</div>

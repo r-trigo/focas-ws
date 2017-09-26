@@ -1,0 +1,1 @@
+json.array! @focas, partial: 'focas/foca', as: :foca
